@@ -2,11 +2,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     
+    const logoImg = document.querySelector('.logo-img');
+    
     const handleScroll = () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
+            if (logoImg) logoImg.src = 'secon-logo.png';
         } else {
             header.classList.remove('scrolled');
+            if (logoImg) logoImg.src = 'logo.png';
         }
     };
 

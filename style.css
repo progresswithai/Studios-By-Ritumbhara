@@ -136,7 +136,7 @@ header.header-solid .nav-links a:hover {
 
 header.scrolled .logo-img,
 header.header-solid .logo-img {
-    height: 80px; /* Increased from 65px */
+    height: 100px; /* Increased from 80px */
     filter: none; /* Keep original logo colors (red circle) */
     opacity: 1;
 }
@@ -175,7 +175,7 @@ nav {
 }
 
 .logo-img {
-    height: 120px; /* Increased from 85px */
+    height: 160px; /* Increased from 120px */
     width: auto;
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
 }
@@ -233,7 +233,7 @@ header.header-solid .menu-toggle {
 .hero h1 {
     font-size: clamp(2.2rem, 8vw, 4.5rem);
     line-height: 1.1;
-    margin-top: 84px;
+    margin-top: 160px; /* Increased to clear larger logo */
     margin-bottom: 2rem;
     font-weight: 700;
 }
