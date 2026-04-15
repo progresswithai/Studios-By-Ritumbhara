@@ -1,8 +1,8 @@
 :root {
     --primary: #000000;
     --primary-light: #111827;
-    --accent: #B91C1C;
-    --accent-hover: #991B1B;
+    --accent: #E11D48 !important; /* Vibrant Premium Red matching logo - Forced Sync */
+    --accent-hover: #BE123C !important; /* Slightly darker for hover */
     --text-main: #F9FAFB;
     --text-muted: #9CA3AF;
     --bg-light: #F9FAFB;
@@ -74,6 +74,10 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.8rem;
+    border: none; /* Removed default borders */
+    outline: none;
+    font-family: inherit;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -84,7 +88,7 @@ section {
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(225, 29, 72, 0.3); /* Updated to match logo red */
 }
 
 .btn-outline {
@@ -113,7 +117,7 @@ header.header-solid {
     background-color: var(--white);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid #f1f5f9;
 }
@@ -132,9 +136,22 @@ header.header-solid .nav-links a:hover {
 
 header.scrolled .logo-img,
 header.header-solid .logo-img {
-    height: 65px;
-    filter: invert(1);
-    opacity: 0.9;
+    height: 80px; /* Increased from 65px */
+    filter: none; /* Keep original logo colors (red circle) */
+    opacity: 1;
+}
+
+/* Fix header button text color and consistency */
+header.scrolled .nav-links a.btn-primary,
+header.header-solid .nav-links a.btn-primary {
+    color: var(--white);
+    background-color: var(--accent);
+    opacity: 1;
+}
+
+header.scrolled .nav-links a.btn-primary:hover,
+header.header-solid .nav-links a.btn-primary:hover {
+    background-color: var(--accent-hover);
 }
 
 header.scrolled .btn-primary,
@@ -158,7 +175,7 @@ nav {
 }
 
 .logo-img {
-    height: 85px; /* Significant size increase */
+    height: 120px; /* Increased from 85px */
     width: auto;
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
 }
@@ -350,7 +367,7 @@ header.header-solid .menu-toggle {
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 0.8rem;
-    background: #FF385C; /* Airbnb Red */
+    background: var(--accent); /* Unified with brand red */
     color: white;
     border-radius: 4px;
     font-size: 0.7rem;
@@ -361,9 +378,9 @@ header.header-solid .menu-toggle {
 }
 
 .btn-airbnb:hover {
-    background: #E31C5F;
+    background: var(--accent-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(255, 56, 92, 0.3);
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3);
 }
 
 .btn-airbnb i {
@@ -385,7 +402,8 @@ header.header-solid .menu-toggle {
 .listing-city {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent) !important;
+
     text-transform: uppercase;
     letter-spacing: 1px;
 }
