@@ -2,10 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     
-    const logoImg = document.querySelector('.logo-img');
+    const logoImg = header.querySelector('.logo-img');
     
     const handleScroll = () => {
-        if (window.scrollY > 50) {
+        // If header has header-solid class (like on Partner page), always use secon-logo
+        if (window.scrollY > 50 || header.classList.contains('header-solid')) {
             header.classList.add('scrolled');
             if (logoImg) logoImg.src = 'secon-logo.png';
         } else {
