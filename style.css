@@ -490,7 +490,7 @@ header.header-solid .menu-toggle {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: var(--primary);
+    background-color: var(--accent);
     color: white;
     text-align: center;
     font-weight: 700;
@@ -503,7 +503,7 @@ header.header-solid .menu-toggle {
 }
 
 .book-now-btn:hover {
-    background-color: var(--accent);
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
 }
