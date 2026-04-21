@@ -59,45 +59,82 @@
         <section class="listings" style="padding-top: 0; padding-bottom: 140px;">
             <div class="container">
                 <div class="listing-grid" style="grid-template-columns: repeat(3, 1fr);">
-                    <!-- Listing 1 -->
+                    
+                    <!-- Property 1: Ashadeep -->
                     <div class="listing-card">
-                        <div class="listing-img" style="background-image: url('listing1.png');"></div>
-                        <div class="listing-content">
-                            <div
-                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                <span class="listing-city">Jaipur</span>
-                                <a href="#" class="btn-airbnb">Airbnb <i data-lucide="external-link"></i></a>
+                        <div class="slideshow-container" id="slideshow-ashadeep">
+                            <div class="slide" style="display: block; background-image: url('listing1.png');"></div>
+                            <div class="slide" style="background-image: url('listing2.png');"></div>
+                            <div class="slide" style="background-image: url('listing3.png');"></div>
+                            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                            <div class="dots-container">
+                                <span class="dot active" onclick="currentSlide(1, 0)"></span>
+                                <span class="dot" onclick="currentSlide(2, 0)"></span>
+                                <span class="dot" onclick="currentSlide(3, 0)"></span>
                             </div>
-                            <h3 class="listing-title">Designer Studio | Bombay Hospital</h3>
-                            <div class="listing-rating"><i data-lucide="star"></i> 4.9 <span>(124 reviews)</span></div>
+                        </div>
+                        <div class="listing-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="listing-city">Jaipur</span>
+                                <span class="text-accent" style="font-weight: 700; font-size: 0.8rem;">RESIDENTIAL</span>
+                            </div>
+                            <h3 class="listing-title">Ashadeep</h3>
+                            <div class="listing-rating"><i data-lucide="star"></i> 4.9 <span>Premium Living</span></div>
+                            <a href="https://reservations.hotel-spider.com/03u69e20bdb541a7" target="_blank" class="book-now-btn">Book Now</a>
                         </div>
                     </div>
-                    <!-- Listing 2 -->
+
+                    <!-- Property 2: Wonder Megacity -->
                     <div class="listing-card">
-                        <div class="listing-img" style="background-image: url('listing2.png');"></div>
+                        <div class="slideshow-container" id="slideshow-wonder">
+                            <div class="slide" style="display: block; background-image: url('listing4.png');"></div>
+                            <div class="slide" style="background-image: url('listing5.png');"></div>
+                            <div class="slide" style="background-image: url('listing6.png');"></div>
+                            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                            <div class="dots-container">
+                                <span class="dot active" onclick="currentSlide(1, 1)"></span>
+                                <span class="dot" onclick="currentSlide(2, 1)"></span>
+                                <span class="dot" onclick="currentSlide(3, 1)"></span>
+                            </div>
+                        </div>
                         <div class="listing-content">
-                            <div
-                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                                 <span class="listing-city">Alwar</span>
-                                <a href="#" class="btn-airbnb">Airbnb <i data-lucide="external-link"></i></a>
+                                <span class="text-accent" style="font-weight: 700; font-size: 0.8rem;">TOWNSHIP</span>
                             </div>
-                            <h3 class="listing-title">Aravali View Modern Studio</h3>
-                            <div class="listing-rating"><i data-lucide="star"></i> 4.8 <span>(92 reviews)</span></div>
+                            <h3 class="listing-title">Wonder Megacity</h3>
+                            <div class="listing-rating"><i data-lucide="star"></i> 4.8 <span>Modern Lifestyle</span></div>
+                            <a href="https://reservations.hotel-spider.com/03u69e20bdb541a7" target="_blank" class="book-now-btn">Book Now</a>
                         </div>
                     </div>
-                    <!-- Listing 3 -->
+
+                    <!-- Property 3: UrbanSuites -->
                     <div class="listing-card">
-                        <div class="listing-img" style="background-image: url('listing3.png');"></div>
-                        <div class="listing-content">
-                            <div
-                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                <span class="listing-city">Jaipur</span>
-                                <a href="#" class="btn-airbnb">Airbnb <i data-lucide="external-link"></i></a>
+                        <div class="slideshow-container" id="slideshow-urban">
+                            <div class="slide" style="display: block; background-image: url('blog1.png');"></div>
+                            <div class="slide" style="background-image: url('blog2.png');"></div>
+                            <div class="slide" style="background-image: url('blog3.png');"></div>
+                            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                            <div class="dots-container">
+                                <span class="dot active" onclick="currentSlide(1, 2)"></span>
+                                <span class="dot" onclick="currentSlide(2, 2)"></span>
+                                <span class="dot" onclick="currentSlide(3, 2)"></span>
                             </div>
-                            <h3 class="listing-title">Modern Work-Friendly Studio</h3>
-                            <div class="listing-rating"><i data-lucide="star"></i> 4.9 <span>(156 reviews)</span></div>
+                        </div>
+                        <div class="listing-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="listing-city">Jaipur</span>
+                                <span class="text-accent" style="font-weight: 700; font-size: 0.8rem;">BOUTIQUE</span>
+                            </div>
+                            <h3 class="listing-title">UrbanSuites</h3>
+                            <div class="listing-rating"><i data-lucide="star"></i> 4.9 <span>Luxury Stay</span></div>
+                            <a href="https://reservations.hotel-spider.com/03u69e20bdb541a7" target="_blank" class="book-now-btn">Book Now</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

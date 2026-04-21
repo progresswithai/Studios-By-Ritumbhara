@@ -65,3 +65,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if (window.lucide) {
     window.lucide.createIcons();
 }
+
+// Slideshow Logic for Portfolio
+let slideId = ["slideshow-ashadeep", "slideshow-wonder", "slideshow-urban"];
+let slideIndex = [1, 1, 1];
+
+// Function to handle next/prev buttons
+window.plusSlides = function(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+// Function to handle dot navigation
+window.currentSlide = function(n, no) {
+  showSlides(slideIndex[no] = n, no);
+}
+
+window.showSlides = function(n, no) {
+  let i;
+  let slideshow = document.getElementById(slideId[no]);
+  if (!slideshow) return;
+  
+  let x = slideshow.getElementsByClassName("slide");
+  let dots = slideshow.getElementsByClassName("dot");
+  
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  if (x[slideIndex[no]-1]) x[slideIndex[no]-1].style.display = "block";  
+  if (dots[slideIndex[no]-1]) dots[slideIndex[no]-1].className += " active";
+}
+
+function showSlides(n, no) {
+    window.showSlides(n, no);
+}
+
+// Auto Slideshow transition every 5 seconds
+setInterval(function() {
+    for(let i=0; i<slideId.length; i++) {
+        if(document.getElementById(slideId[i])) {
+            plusSlides(1, i);
+        }
+    }
+}, 5000);
