@@ -106,11 +106,4 @@ function showSlides(n, no) {
     window.showSlides(n, no);
 }
 
-// Auto Slideshow transition every 5 seconds
-setInterval(function() {
-    for(let i=0; i<slideId.length; i++) {
-        if(document.getElementById(slideId[i])) {
-            plusSlides(1, i);
-        }
-    }
-}, 5000);
+
