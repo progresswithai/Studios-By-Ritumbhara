@@ -219,7 +219,7 @@ header.header-solid .menu-toggle {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('hero_bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('images/hero_bg.png');
     background-size: cover;
     background-position: center;
     color: var(--white);

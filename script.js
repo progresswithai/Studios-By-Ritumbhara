@@ -3,15 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     
     const logoImg = header.querySelector('.logo-img');
+
+    const getImagePath = (filename) => {
+        const isBlogSubpage = window.location.pathname.includes('/blog/');
+        const prefix = isBlogSubpage ? '../images/' : 'images/';
+        return `${prefix}${filename}`;
+    };
     
     const handleScroll = () => {
         // If header has header-solid class (like on Partner page), always use secon-logo
         if (window.scrollY > 50 || header.classList.contains('header-solid')) {
             header.classList.add('scrolled');
-            if (logoImg) logoImg.src = 'secon-logo.png';
+            if (logoImg) logoImg.src = getImagePath('secon-logo.png');
         } else {
             header.classList.remove('scrolled');
-            if (logoImg) logoImg.src = 'logo.png';
+            if (logoImg) logoImg.src = getImagePath('logo.png');
         }
     };
 
