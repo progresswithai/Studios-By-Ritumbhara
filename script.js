@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoImg = header.querySelector('.logo-img');
 
     const getImagePath = (filename) => {
-        const isBlogSubpage = window.location.pathname.includes('/blog/');
-        const prefix = isBlogSubpage ? '../images/' : 'images/';
+        const path = window.location.pathname;
+        const isSubpage = path.includes('/blog/');
+        const prefix = isSubpage ? '../images/' : 'images/';
         return `${prefix}${filename}`;
     };
     
